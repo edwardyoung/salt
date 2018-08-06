@@ -86,7 +86,6 @@ Vagrant.configure("2") do |config|
     spunk_idx4.vm.network "private_network", ip: "192.168.50.12"
   end
 
-
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -117,7 +116,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder "C:/Users/edwar/Vagrant_Share", "/vagrant_splunk"
+  config.vm.synced_folder "../../Vagrant_Share", "/vagrant_splunk"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
