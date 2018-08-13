@@ -87,7 +87,7 @@ Vagrant.configure("2") do |config|
     splunk_idx3.vm.box = "bento/debian-9.5"
     splunk_idx3.vm.hostname = "spl-idx3"
     splunk_idx3.vm.network "private_network", ip: "192.168.50.11"
-    splunk_idx4.vm.network "forwarded_port", guest: 22, host: 2229
+    splunk_idx3.vm.network "forwarded_port", guest: 22, host: 2229
   end
 
   config.vm.define "splunk_idx4" do |splunk_idx4|
