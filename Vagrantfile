@@ -24,77 +24,77 @@ Vagrant.configure("2") do |config|
     salt_master.vm.box = "bento/debian-9.5"
     salt_master.vm.hostname = "salt-master"
     salt_master.vm.network "private_network", ip: "192.168.50.2"
-    salt_master.vm.network "forwarded_port", guest: 22, host: 2222
+    salt_master.vm.network "forwarded_port", guest: 22, host: 2222, id: "ssh"
   end
 
   config.vm.define "splunk_deployer" do |splunk_deployer|
     splunk_deployer.vm.box = "bento/debian-9.5"
     splunk_deployer.vm.hostname = "spl-deployer"
     splunk_deployer.vm.network "private_network", ip: "192.168.50.3"
-    splunk_deployer.vm.network "forwarded_port", guest: 22, host: 2223
+    splunk_deployer.vm.network "forwarded_port", guest: 22, host: 2223, id: "ssh"
   end
 
   config.vm.define "splunk_sh1" do |splunk_sh1|
     splunk_sh1.vm.box = "bento/debian-9.5"
     splunk_sh1.vm.hostname = "spl-sh1"
     splunk_sh1.vm.network "private_network", ip: "192.168.50.4"
-    splunk_sh1.vm.network "forwarded_port", guest: 22, host: 2224
+    splunk_sh1.vm.network "forwarded_port", guest: 22, host: 2224, id: "ssh"
   end
 
   config.vm.define "splunk_sh2" do |splunk_sh2|
     splunk_sh2.vm.box = "bento/debian-9.5"
     splunk_sh2.vm.hostname = "spl-sh2"
     splunk_sh2.vm.network "private_network", ip: "192.168.50.5"
-    splunk_sh2.vm.network "forwarded_port", guest: 22, host: 2225
+    splunk_sh2.vm.network "forwarded_port", guest: 22, host: 2225, id: "ssh"
   end
 
   config.vm.define "splunk_sh3" do |splunk_sh3|
     splunk_sh3.vm.box = "bento/debian-9.5"
     splunk_sh3.vm.hostname = "spl-sh3"
     splunk_sh3.vm.network "private_network", ip: "192.168.50.6"
-    splunk_sh3.vm.network "forwarded_port", guest: 22, host: 2226
+    splunk_sh3.vm.network "forwarded_port", guest: 22, host: 2226, id: "ssh"
   end
 
   config.vm.define "splunk_sh4" do |splunk_sh4|
     splunk_sh4.vm.box = "bento/debian-9.5"
     splunk_sh4.vm.hostname = "spl-sh4"
     splunk_sh4.vm.network "private_network", ip: "192.168.50.7"
-    splunk_sh4.vm.network "forwarded_port", guest: 22, host: 2227
+    splunk_sh4.vm.network "forwarded_port", guest: 22, host: 2227, id: "ssh"
   end
 
   config.vm.define "splunk_master" do |splunk_master|
     splunk_master.vm.box = "bento/debian-9.5"
     splunk_master.vm.hostname = "spl-master"
     splunk_master.vm.network "private_network", ip: "192.168.50.8"
-    splunk_master.vm.network "forwarded_port", guest: 22, host: 2228
+    splunk_master.vm.network "forwarded_port", guest: 22, host: 2228, id: "ssh"
   end
 
   config.vm.define "splunk_idx1" do |splunk_idx1|
     splunk_idx1.vm.box = "bento/debian-9.5"
     splunk_idx1.vm.hostname = "spl-idx1"
     splunk_idx1.vm.network "private_network", ip: "192.168.50.9"
-    splunk_idx1.vm.network "forwarded_port", guest: 22, host: 2228
+    splunk_idx1.vm.network "forwarded_port", guest: 22, host: 2228, id: "ssh"
   end
 
   config.vm.define "splunk_idx2" do |splunk_idx2|
     splunk_idx2.vm.box = "bento/debian-9.5"
     splunk_idx2.vm.hostname = "spl-idx2"
     splunk_idx2.vm.network "private_network", ip: "192.168.50.10"
-    splunk_idx2.vm.network "forwarded_port", guest: 22, host: 2229
+    splunk_idx2.vm.network "forwarded_port", guest: 22, host: 2229, id: "ssh"
   end
 
   config.vm.define "splunk_idx3" do |splunk_idx3|
     splunk_idx3.vm.box = "bento/debian-9.5"
     splunk_idx3.vm.hostname = "spl-idx3"
     splunk_idx3.vm.network "private_network", ip: "192.168.50.11"
-    splunk_idx3.vm.network "forwarded_port", guest: 22, host: 2229
+    splunk_idx3.vm.network "forwarded_port", guest: 22, host: 2229, id: "ssh"
   end
 
   config.vm.define "splunk_idx4" do |splunk_idx4|
     splunk_idx4.vm.box = "bento/debian-9.5"
     splunk_idx4.vm.hostname = "spl-idx4"
     splunk_idx4.vm.network "private_network", ip: "192.168.50.12"
-    splunk_idx4.vm.network "forwarded_port", guest: 22, host: 2230
+    splunk_idx4.vm.network "forwarded_port", guest: 22, host: 2230, id: "ssh"
   end
 
   # Disable automatic box update checking. If you disable this, then
