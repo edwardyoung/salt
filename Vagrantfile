@@ -73,28 +73,28 @@ Vagrant.configure("2") do |config|
     splunk_idx1.vm.box = "bento/debian-9.5"
     splunk_idx1.vm.hostname = "spl-idx1"
     splunk_idx1.vm.network "private_network", ip: "192.168.50.9"
-    splunk_idx1.vm.network "forwarded_port", guest: 22, host: 2228, id: "ssh"
+    splunk_idx1.vm.network "forwarded_port", guest: 22, host: 2229, id: "ssh"
   end
 
   config.vm.define "splunk_idx2" do |splunk_idx2|
     splunk_idx2.vm.box = "bento/debian-9.5"
     splunk_idx2.vm.hostname = "spl-idx2"
     splunk_idx2.vm.network "private_network", ip: "192.168.50.10"
-    splunk_idx2.vm.network "forwarded_port", guest: 22, host: 2229, id: "ssh"
+    splunk_idx2.vm.network "forwarded_port", guest: 22, host: 2230, id: "ssh"
   end
 
   config.vm.define "splunk_idx3" do |splunk_idx3|
     splunk_idx3.vm.box = "bento/debian-9.5"
     splunk_idx3.vm.hostname = "spl-idx3"
     splunk_idx3.vm.network "private_network", ip: "192.168.50.11"
-    splunk_idx3.vm.network "forwarded_port", guest: 22, host: 2229, id: "ssh"
+    splunk_idx3.vm.network "forwarded_port", guest: 22, host: 2231, id: "ssh"
   end
 
   config.vm.define "splunk_idx4" do |splunk_idx4|
     splunk_idx4.vm.box = "bento/debian-9.5"
     splunk_idx4.vm.hostname = "spl-idx4"
     splunk_idx4.vm.network "private_network", ip: "192.168.50.12"
-    splunk_idx4.vm.network "forwarded_port", guest: 22, host: 2230, id: "ssh"
+    splunk_idx4.vm.network "forwarded_port", guest: 22, host: 2232, id: "ssh"
   end
 
   # Disable automatic box update checking. If you disable this, then
